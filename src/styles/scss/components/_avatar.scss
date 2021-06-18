@@ -1,0 +1,15 @@
+.avatar {
+  border: rem(10) solid $color-purple;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: rem(150);
+  height: rem(150);
+
+  img {
+    border-radius: 50%;
+    width: 100%;
+  }
+}

@@ -1,0 +1,290 @@
+/**
+Storing all used colors in constants for maintainability reasons.
+ */
+/**
+Expects a value in px and returns a rem value since it's easier (for me) to think in pixels.
+ */
+/**
+Here we define all global values and global selector overrides.
+ */
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PoppinsSemiBold';
+  src: url("../fonts/Poppins-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  background-image: linear-gradient(#121212 0%, #24292e 100%);
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.0125rem;
+}
+
+main, header, section, aside, footer {
+  display: block;
+  margin: 0;
+}
+
+section {
+  height: 37.5rem;
+  width: 31.25rem;
+  padding: 1.25rem;
+}
+@media screen and (min-width: 40rem) {
+  section {
+    padding: 1.875rem;
+    height: 100%;
+    display: flex;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: PoppinsSemiBold, Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+ul {
+  padding: 0;
+}
+
+main {
+  margin: 10% auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+@media (min-width: 40rem) {
+  main {
+    width: 57.5rem;
+  }
+}
+
+figure {
+  background-color: #24292e;
+  margin: 0;
+  height: 40%;
+  width: 40%;
+}
+
+p {
+  text-align: justify;
+}
+
+input, textarea {
+  background-color: #24292e;
+  color: #03DAC6;
+  outline: 0;
+  border: 0;
+  border-radius: 0.25rem;
+  max-width: 31.25rem;
+  margin: 1% 0 2%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+  box-sizing: border-box;
+  height: 3.125rem;
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+  border: 0.0625rem solid #03DAC6;
+}
+
+[type="text"] {
+  width: 100%;
+}
+
+[type="checkbox"] {
+  vertical-align: middle;
+  margin-right: 3%;
+  text-align: center;
+  transition-duration: 0.3s;
+  background-color: #24292e;
+  cursor: pointer;
+}
+[type="checkbox"]:after {
+  transition-duration: 0.3s;
+  content: ' ';
+}
+[type="checkbox"]:checked {
+  background-color: #3700B3;
+}
+
+label {
+  line-height: 2.5rem;
+}
+
+/*!
+ * React Transitions - http://joerezendes.com/projects/react-transitions
+ * Version - 1.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Github - https://github.com/joerez/react-transitions
+ *
+ * Copyright (c) 2018 Joe Rezendes
+ */
+.transition-container {
+  perspective: 800px;
+}
+
+.react-transition {
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation-timing-function: ease-in-out;
+  transform-origin: bottom center;
+  animation-name: fadeIn;
+  animation-duration: 500ms;
+}
+
+.button {
+  margin-top: 1.25rem;
+  height: 3.125rem;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.01563rem;
+  color: white;
+}
+.button--primary {
+  margin-left: auto;
+  background: #3700B3;
+}
+.button--secondary {
+  background: #24292e;
+}
+.button--enabled {
+  opacity: 1.0;
+  pointer-events: auto;
+}
+.button--disabled {
+  color: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+}
+.button:hover {
+  filter: brightness(120%);
+}
+
+.text-input {
+  padding: 2% 0;
+}
+
+.validation-error {
+  display: inline-block;
+  width: 100%;
+  color: #CF6679;
+}
+
+.check-box {
+  padding: 5% 0;
+}
+
+.loader {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader h2 {
+  -webkit-animation: color_change 1s infinite alternate;
+  -moz-animation: color_change 1s infinite alternate;
+  -o-animation: color_change 1s infinite alternate;
+  animation: color_change 1s infinite alternate;
+}
+
+@keyframes color_change {
+  from {
+    color: #24292e;
+  }
+  to {
+    color: #03DAC6;
+  }
+}
+.avatar {
+  border: 0.625rem solid #3700B3;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 9.375rem;
+  height: 9.375rem;
+}
+.avatar img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.error {
+  display: block;
+  padding: 5%;
+  border: 0.1875rem solid #CF6679;
+  text-align: center;
+}
+.error h2 {
+  color: #CF6679;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 40rem) {
+  .content {
+    height: 100%;
+    display: flex;
+  }
+}
+
+.personal-data-list {
+  margin-top: 10%;
+  display: inline-block;
+  font-size: 1.25rem;
+}
+.personal-data-list * {
+  margin: 0.875rem 0;
+  display: block;
+  text-align: center;
+}
+.personal-data-list h4 {
+  color: #03DAC6;
+}
+
+/*# sourceMappingURL=main.css.map */

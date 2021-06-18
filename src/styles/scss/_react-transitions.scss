@@ -1,0 +1,34 @@
+/*!
+ * React Transitions - http://joerezendes.com/projects/react-transitions
+ * Version - 1.0
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Github - https://github.com/joerez/react-transitions
+ *
+ * Copyright (c) 2018 Joe Rezendes
+ */
+
+.transition-container {
+  perspective: 800px;
+}
+
+.react-transition {
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-timing-function: ease-in-out;
+  transform-origin: bottom center;
+  animation-name: fadeIn;
+  animation-duration: 500ms;
+}

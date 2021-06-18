@@ -1,0 +1,14 @@
+/**
+Storing all used colors in constants for maintainability reasons.
+ */
+
+$color-red: #CF6679;
+$color-white: #ffffff;
+$color-charcoal: #24292e;
+$color-black: #121212;
+$color-purple: #3700B3;
+$color-teal: #03DAC6;
+
+$text-emphasis: rgba($color-white, 1);
+$text-normal: rgba($color-white, 0.80);
+$text-disabled: rgba($color-white, 0.60);

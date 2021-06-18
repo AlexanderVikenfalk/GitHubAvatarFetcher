@@ -1,0 +1,26 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  @media screen and (min-width: rem(640)) {
+    height: 100%;
+    display: flex;
+  }
+}
+
+.personal-data-list {
+  margin-top: 10%;
+  display: inline-block;
+  font-size: rem(20);
+
+  * {
+    margin: rem(14) 0;
+    display: block;
+    text-align: center;
+  }
+
+  h4 {
+    color: $color-teal;
+  }
+}

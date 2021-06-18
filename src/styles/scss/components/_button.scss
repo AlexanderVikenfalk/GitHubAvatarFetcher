@@ -1,0 +1,38 @@
+.button {
+  margin-top: rem(20);
+  height: rem(50);
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  border-radius: rem(0.25);;
+  color: $text-emphasis;
+
+  &--primary {
+    margin-left: auto;
+    background: $color-purple;
+  }
+
+  &--secondary {
+    background: $color-charcoal;
+  }
+
+  &--enabled {
+    opacity: 1.0;
+    pointer-events: auto;
+  }
+
+  &--disabled {
+    color: $text-disabled;
+    pointer-events: none;
+  }
+
+  &:hover {
+    filter: brightness(120%);
+  }
+}

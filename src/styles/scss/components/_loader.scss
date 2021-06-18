@@ -1,0 +1,17 @@
+.loader {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2{
+    -webkit-animation: color_change 1s infinite alternate;
+    -moz-animation: color_change 1s infinite alternate;
+    -o-animation: color_change 1s infinite alternate;
+    animation: color_change 1s infinite alternate;
+  }
+}
+
+@keyframes color_change {
+  from { color: $color-charcoal; }
+  to { color: $color-teal;; }
+}

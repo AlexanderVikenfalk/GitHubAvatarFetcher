@@ -1,0 +1,132 @@
+/**
+Here we define all global values and global selector overrides.
+ */
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/Poppins-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PoppinsSemiBold';
+  src: url('../fonts/Poppins-SemiBold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: rem(16);
+  background-image: linear-gradient($color-black 0%, $color-charcoal 100%);
+  color: $text-normal;
+  letter-spacing: rem(0.2);
+}
+
+main, header, section, aside, footer {
+  display: block;
+  margin: 0;
+}
+
+section {
+  height: rem(600);
+  width: rem(500);
+  padding: rem(20);
+  @media screen and (min-width: rem(640)) {
+    padding: rem(30);
+    height: 100%;
+    display: flex;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: PoppinsSemiBold, Arial, Helvetica, sans-serif;
+  color: $text-emphasis;
+}
+
+ul {
+  padding: 0;
+}
+
+main {
+  margin: 10% auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  @media (min-width: rem(640)) {
+    width: rem(920);
+  }
+}
+
+figure {
+  background-color: $color-charcoal;
+  margin: 0;
+  height: 40%;
+  width: 40%;
+}
+
+p {
+  text-align: justify;
+}
+
+input, textarea {
+  background-color: $color-charcoal;
+  color: $color-teal;
+  outline: 0;
+  border: 0;
+  border-radius: rem(4);
+  max-width: rem(500);
+  margin: 1% 0 2%;
+  padding: rem(16);
+  font-size: rem(24);
+  font-weight: 400;
+  text-align: center;
+  box-sizing: border-box;
+  height: rem(50);
+}
+
+input, textarea, button {
+  &:focus {
+    outline: none;
+    border: rem(1) solid $color-teal;
+  }
+}
+
+[type="text"] {
+  width: 100%;
+}
+
+[type="checkbox"] {
+  vertical-align: middle;
+  margin-right: 3%;
+  text-align: center;
+  transition-duration: 0.3s;
+  background-color: $color-charcoal;
+  cursor: pointer;
+
+  &:after {
+    transition-duration: 0.3s;
+    content: ' ';
+  }
+
+  &:checked {
+    background-color: $color-purple;
+  }
+}
+
+label {
+  line-height: rem(40);
+}

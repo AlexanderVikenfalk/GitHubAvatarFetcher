@@ -1,0 +1,6 @@
+/**
+Expects a value in px and returns a rem value since it's easier (for me) to think in pixels.
+ */
+@function rem($px){
+  @return $px/16+rem;
+}

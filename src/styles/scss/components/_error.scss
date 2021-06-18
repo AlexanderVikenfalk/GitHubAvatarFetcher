@@ -1,0 +1,9 @@
+.error {
+  display: block;
+  padding: 5%;
+  border: rem(3) solid $color-red;
+  text-align: center;
+  h2 {
+    color: $color-red;
+  }
+}
